@@ -1,0 +1,74 @@
+<html ng-app="myApp">
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script>
+	myApp=angular.module('myApp',[]);
+	myApp.controller('myController', function($scope,$http){
+		$http.get('json/data.json').success(function(response){
+			$scope.myData = response;
+		});
+	});
+	</script>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="images/pencil.png">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+
+	</head>
+	<body >
+
+		<div class="site-container">
+			<div class="site-header">
+				<span class="big lightGray">KA PLAYLIST <span class="beta">(beta)</span></span>
+				<span class="nav medium">
+					<a href="" class="navButton active">search</a>
+					<a href="https://ch4boi.github.io/KAplaylist/manage.html" class="navButton">manage</a>
+				</span>
+			</div>
+
+			<main class="site-content">
+			<div class="pageHead">
+				Search over 7,000 course & exercises
+			</div>
+
+			<form id="filterBox">
+				<div class="close big gray">^</div>
+				<span class="medium-big faded">filters:</span>
+				<br>
+				<div id="filterPannel">
+					<form id="filterPannel" action="">
+						<input class="filter" type="checkbox" name="subjects" value="123"> Subjects
+						<input class="filter" type="checkbox" name="Language" value="456"> Languages
+						<input class="filter" type="checkbox" name="Length" value="789"> Length
+					</form>
+					<a href="" id="apply" >apply filter</a>
+				</div>
+				</span>
+			</form>
+
+			<table class="courses" ng-controller="myController">
+				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
+				  <tr>
+				    <td class="medium-big black partNumber" rowspan="3"><div>{{$index+1}}. </div></td>
+				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
+				    <td class="addButtons" rowspan="3"><a href="#"><div class="charcoal addCourseButton">add course</div></a></td>
+				  </tr>
+				  <tr>
+				    <td class="courseDescription small lightGray" colspan="3">{{data.description}}</td>
+				  </tr>
+				    <tr>
+				    <td colspan="3"><a class="hyperlinks" target="_blank" href="{{data.url}}">visit lesson >></a></td>
+				  </tr>
+				</tbody>
+			</table>
+
+			<footer class="site-footer">
+					KA PLAYLIST (beta) &copy; 2016
+			</footer>
+		</div><!-- .site-container -->
+
+	</body>
+</html>
