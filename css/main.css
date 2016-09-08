@@ -86,14 +86,13 @@ Links
 .site-container {
 	max-width: 1200px;
 	margin: 0 auto;
-	margin-top: 120px;
+	margin-top: 90px;
     font-family: 'Gotham-Book', sans-serif;
 }
 
 .site-header {
 	height: 100px;
 	border-bottom: 3px solid RGBA(180, 180, 180, 1.00);
-	margin-bottom: 10px;
 	padding-left: 50px;
 	font-family: 'Gotham-Light', sans-serif;
 }
@@ -135,7 +134,7 @@ Links
 .small{ font-size: .9rem; letter-spacing: .8px;}
 .medium-small{ font-size: 1rem; }
 .medium{ font-size: 1.25rem; letter-spacing: 1px; text-decoration:}
-.medium-big{ font-size: 1.85rem; letter-spacing: 2px;}
+.medium-big{ font-size: 1.85rem; letter-spacing: 2px; font-weight: 300;}
 .big{ font-size: 3.5rem; letter-spacing: 1.75px; font-weight: 100; font-stretch: ultra-expanded;}
 
 .black { color: RGBA(0, 0, 0, 1.00); }
@@ -167,12 +166,11 @@ Links
 .pageHead{
 	margin-top: 15px;
 	margin-bottom: 50px;
-	padding-top: 40px;
-	font-size: 1.5rem;
+	padding-top: 30px;
 }
 
 #filterBox{
-	height: 180px;
+	height: 140px;
 	margin-bottom: 25px;
 	background-color: RGBA(240, 240, 240, 1.00);
 	border-radius: 7px;
@@ -181,30 +179,20 @@ Links
 	max-width: 750px;
 }
 
-.close{
-	opacity: .7;
-	display: inline-block;
-	padding-right: 20px;
-	padding-left: 20px;
-	height: 38px;
-	border: 2px solid RGBA(200, 200, 200, 1.00);
-	border-radius: 10px;
-	margin: 15px;
-}
-
-.close:hover{
-	color: black;
-	background-color: white;
-}
 
 #filterPannel{
 	margin-left: 120px;
-	margin-top: 20px;
 	display: inline-block;
 }
 
 .filter {
 	margin: 20px 20px;
+	display: inline-block;
+}
+
+.filterText{
+	margin-left: 20px;
+	margin-top: 20px;
 	display: inline-block;
 }
 
