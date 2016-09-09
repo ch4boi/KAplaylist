@@ -134,7 +134,11 @@ Links
 .small{ font-size: .9rem; letter-spacing: .8px; font-weight: 100;}
 .medium-small{ font-size: 1rem; }
 .medium{ font-size: 1.25rem; letter-spacing: 1.5px; text-decoration:}
+<<<<<<< HEAD
 .medium-big{ font-size: 1.85rem; letter-spacing: 2px; font-weight: 300;}
+=======
+.medium-big{ font-size: 1.85rem; letter-spacing: 1px; font-weight: 300;}
+>>>>>>> gh-pages
 .big{ font-size: 3.5rem; letter-spacing: 1.75px; font-weight: 100; font-stretch: ultra-expanded;}
 
 .black { color: RGBA(0, 0, 0, 1.00); }
@@ -155,7 +159,7 @@ Links
 .nav{
 	float: right;
 	margin-top: 30px;
-	margin-right: 50px;
+	margin-right: 150px;
 }
 
 .navButton{
@@ -165,12 +169,17 @@ Links
 
 .pageHead{
 	margin-bottom: 50px;
-	padding-top: 30px;
+	margin-top: 20px;
+	margin-left: 15px;
 }
 
 #filterBox{
 	height: 140px;
+<<<<<<< HEAD
 	margin-top: 50px;
+=======
+	margin-top: 25px;
+>>>>>>> gh-pages
 	background-color: RGBA(240, 240, 240, 1.00);
 	border-radius: 7px;
 	display: inline-block;
@@ -226,7 +235,7 @@ td.courseTitle{
 }
 
 .courses{
-	max-width: 850px;
+	max-width: 700px;
 }
 
 .course{
