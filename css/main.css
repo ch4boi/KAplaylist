@@ -131,9 +131,9 @@ Links
 /* ADDITIONAL STYLES                   
 /*******************************************/
 
-.small{ font-size: .9rem; letter-spacing: .8px;}
+.small{ font-size: .9rem; letter-spacing: .8px; font-weight: 100;}
 .medium-small{ font-size: 1rem; }
-.medium{ font-size: 1.25rem; letter-spacing: 1px; text-decoration:}
+.medium{ font-size: 1.25rem; letter-spacing: 1.5px; text-decoration:}
 .medium-big{ font-size: 1.85rem; letter-spacing: 2px; font-weight: 300;}
 .big{ font-size: 3.5rem; letter-spacing: 1.75px; font-weight: 100; font-stretch: ultra-expanded;}
 
@@ -164,14 +164,13 @@ Links
 }
 
 .pageHead{
-	margin-top: 15px;
 	margin-bottom: 50px;
 	padding-top: 30px;
 }
 
 #filterBox{
 	height: 140px;
-	margin-bottom: 25px;
+	margin-top: 50px;
 	background-color: RGBA(240, 240, 240, 1.00);
 	border-radius: 7px;
 	display: inline-block;
@@ -212,8 +211,6 @@ Links
 .courseContainer{
 	width: 850px;
 	display: inline-block;
-	margin-top: 10px;
-	font-size: 
 }
 
 
@@ -233,7 +230,7 @@ td.courseTitle{
 }
 
 .course{
-	max-width: 800px;
+	max-width: 700px;
 	display: inline-block;
 	margin-bottom: 30px;
 	width: 100%;
@@ -249,13 +246,14 @@ td.courseDescription{
 }
 
 .addButtons{
-	width: 160px;
+	width: 180px;
 
 }
 
 .addCourseButton {
 	margin-left: 20px;
-	padding: 10px 20px;
+	vertical-align: middle;
+	padding: 5px 20px;
 	border: 1px solid RGBA(220, 220, 220, 1.00);
 	border-radius: 3px;
 	display: inline-block;
@@ -278,16 +276,12 @@ td.courseDescription{
 	margin-top: 10px;
 }
 
-.plusButton {
+.plus {
 	font-size: 2.75rem;
 	font-weight: 600;
-	margin-top: -4px;
 	display: inline-block;
 }
 
-.plusButton:hover {
-	color: white;
-}
 
 .active {
 	border-bottom: 2px solid gray;

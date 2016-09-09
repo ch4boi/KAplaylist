@@ -30,9 +30,6 @@
 			</div>
 
 			<main class="site-content">
-			<div class="pageHead medium-big gray">
-				Select from 2,986 online exercises
-			</div>
 
 			<form id="filterBox">
 				<span class="filterText medium-big faded">filters:</span>
@@ -47,18 +44,22 @@
 				</div>
 			</form>
 
+			<div class="pageHead medium-big gray">
+				Select from 2,986 online exercises:
+			</div>
+
 			<table class="courses" ng-controller="myController">
 				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
 				  <tr>
 				    <td class="medium-big black partNumber" rowspan="3"><div>{{$index+1}}. </div></td>
 				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
-				    <td class="addButtons" rowspan="3"><a href="#"><div class="charcoal addCourseButton">add course</div></a></td>
+				    <td class="addButtons" rowspan="3"><a href="#"><div class="charcoal addCourseButton">add course <span class="plus medium-big lightGray">+</span></div></a></td>
 				  </tr>
 				  <tr>
 				    <td class="courseDescription small lightGray" colspan="3">{{data.description}}</td>
 				  </tr>
 				    <tr>
-				    <td colspan="3"><a class="hyperlinks" target="_blank" href="{{data.url}}">visit lesson >></a></td>
+				    <td colspan="3"><a class="hyperlinks" target="_blank" href="{{data.url}}">visit exercise >></a></td>
 				  </tr>
 				</tbody>
 			</table>
