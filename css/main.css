@@ -171,7 +171,7 @@ Font-sizes:
 	margin-top: -34px;
 	width: 80%;
 	margin-left: 9%;
-	border-radius: 3px;
+	border-radius: 1px;
 	border: 1px solid #E6E6E6;
 	height: 23px;
 }
@@ -182,6 +182,7 @@ Font-sizes:
 	margin-bottom: 38px;
 	width: 50%;
 	margin-left: 25%;
+	border-radius: 3px;
 	}}
 
 @media (min-width: 1000px){
@@ -312,8 +313,8 @@ Font-sizes:
 	font-size: 
 }
 
-tr{
-	border: 1px solid RGBA(230, 230, 230, 1.00);
+tbody {
+	border-bottom: 1px solid RGBA(230, 230, 230, 1.00);
 }
 
 td.partNumber{
@@ -357,6 +358,7 @@ td.courseDescription{
     padding-top: 1px;
     padding-bottom: 3px;
     border-radius: 5px;
+    margin-right: -24;
 }
 
 .addButtons {
