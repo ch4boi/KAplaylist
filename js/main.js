@@ -9,8 +9,8 @@
 			return name + "'s";
 		}
 // prompt the user for their name
-		var username = prompt('What is your name?', 'don\'t get smart with me');
-		console.log( username );
+		// var username = prompt('What is your name?', 'don\'t get smart with me');
+		// console.log( username );
 //$-symbol will select an html element from the page
 //#-symbol refers to a CSS id
 //.text is a jQuery method that can get & set texts
