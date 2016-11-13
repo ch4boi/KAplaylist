@@ -201,6 +201,7 @@ Font-sizes:
 	text-transform: uppercase;
 	word-spacing: .3rem; 
 	color: #646464;
+	margin-right: 5px
 }
 
 @media (min-width: 800px){
@@ -257,7 +258,7 @@ Font-sizes:
 /*******************************************/
 
 .pageCount {
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	margin-left: -50px;
 	text-align: center;
 	display: inline-block;
@@ -314,6 +315,8 @@ Font-sizes:
 }
 
 tbody {
+	margin-top: -15px;
+	padding-bottom:10px
 	border-bottom: 1px solid RGBA(230, 230, 230, 1.00);
 }
 
@@ -362,9 +365,9 @@ td.courseDescription{
 }
 
 .addButtons {
-	padding: 3px 2px 0px 2px;
+	padding: 0px 2px 0px 2px;
 	font-size: 1.75rem;
-	line-height: 18px;
+	line-height: 20px;
 	margin-top: -25px;
 	margin-right: 10px;
 	color: RGBA(167, 218, 160, 1.00);
