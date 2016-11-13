@@ -169,8 +169,8 @@ Font-sizes:
 
 #search{
 	margin-top: -34px;
-	width: 90%;
-	margin-left: 5%;
+	width: 80%;
+	margin-left: 9%;
 	border-radius: 3px;
 	border: 1px solid #E6E6E6;
 	height: 23px;
@@ -211,6 +211,15 @@ Font-sizes:
 	}
 }
 
+.KAlogo{
+	width: 25px;
+}
+
+@media (min-width: 800px){
+.KAlogo{
+	width: 40px;
+}}
+
 .site-content {
 	max-width: 960px;
 	margin: 0 auto;
@@ -247,7 +256,7 @@ Font-sizes:
 /*******************************************/
 
 .pageCount {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 	margin-left: -50px;
 	text-align: center;
 	display: inline-block;
@@ -277,7 +286,6 @@ Font-sizes:
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 5px;
-	padding-top: 2px;
 	padding-left: 10px;
 	padding-right: 11px;
 	display: inline-block;
@@ -302,6 +310,10 @@ Font-sizes:
 	display: inline-block;
 	margin-top: 10px;
 	font-size: 
+}
+
+tr{
+	border: 1px solid RGBA(230, 230, 230, 1.00);
 }
 
 td.partNumber{
@@ -337,13 +349,22 @@ td.courseDescription{
 	display: inline-block;
 	color: #7d9dfe;
 	font-size: .75rem;
+	float: right;
+    margin-top: -10px;
+    background-color: #f6f6f6;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    border-radius: 5px;
 }
 
 .addButtons {
 	padding: 3px 2px 0px 2px;
 	font-size: 1.75rem;
 	line-height: 18px;
-	margin-top: -30px;
+	margin-top: -25px;
+	margin-right: 10px;
 	color: RGBA(167, 218, 160, 1.00);
 	border: 2px solid RGBA(167, 218, 160, 1.00);
 	border-radius: 5px;
@@ -482,7 +503,7 @@ nav ul li ul li a {
 	cursor: pointer;
 	border-radius: 3px;
 	height: 4px;
-	width: 25px;
+	width: 28px;
 	background: #C8C8C8;
 	position: absolute;
 	display: block;
