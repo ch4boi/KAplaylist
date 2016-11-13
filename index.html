@@ -13,58 +13,76 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="images/pencil.png">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
+<!-- 	<link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
 	</head>
 	<body >
-
 		<div class="site-container">
-			<div class="site-header">
-				<span class="big lightGray">KA PLAYLIST <span class="beta">(beta)</span></span>
-				<span class="nav medium">
-					<a href="" class="navButton active">search</a>
-					<a href="https://ch4boi.github.io/KAplaylist/manage.html" class="navButton">manage</a>
-				</span>
-			</div>
+			
+			<div class="site-header">	
+			    <div class="brand">
+			      <span class="logo">KA PLAYLIST</span>
+			    </div>
+			    <nav>
+			      <div class="nav-mobile">
+			        <a id="nav-toggle" href="#!"><span></span></a>
+			      </div>
+			      <ul class="nav-list">
+			        <li>
+			          <a href="#!">home</a>
+			        </li>
+			        <li>
+			          <a href="#!">about</a>
+			        </li>
+			        <li>
+			          <a href="#!">how to</a>
+			          <ul class="nav-dropdown">
+			            <li>
+			              <a href="#!">create</a>
+			            </li>
+			            <li>
+			              <a href="#!">share</a>
+			            </li>
+			            <li>
+			              <a href="#!">extras</a>
+			            </li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="#!">contact</a>
+			        </li>
+			      </ul>
+			    </nav>
+			 </div>
+
+			<br>
+    			<input class="site-search" id="search" type="search" id="search" placeholder="Search &nbsp; &#128269; &nbsp; lessons..." />
 
 			<main class="site-content">
 
-			<form id="filterBox">
-				<span class="filterText medium-big faded">filters:</span>
-				<br>
-				<div id="filterPannel">
-					<form id="filterPannel" action="">
-						<input class="filter" type="checkbox" name="subjects" value="123"> Subjects
-						<input class="filter" type="checkbox" name="Language" value="456"> Languages
-						<input class="filter" type="checkbox" name="Length" value="789"> Length
-					</form>
-					<a href="" id="apply" >apply filter</a>
-				</div>
-			</form>
-
-			<div class="pageHead medium-big gray">
-				Select from 2,986 online exercises:
-			</div>
 
 			<table class="courses" ng-controller="myController">
 
-				<div class="pageHead medium-big gray">
-					Select from 7,654 online exercises
+				<div class="pageCount">
+					<div class="count">7,654 </div>
+					<div class="ex1">exercises - </div>
+					<a href="#!" class="filter">filter</a>
 				</div>
 				
 				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
 				  <tr>
-				    <td class="medium-big black partNumber" rowspan="3"><div>{{$index+1}}. </div></td>
+				    <td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
 				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
-				    <td class="addButtons" rowspan="3"><a href="#"><div class="charcoal addCourseButton">add course <span class="plus medium-big lightGray">+</span></div></a></td>
+				    <td class="addCourseButton" rowspan="3"><a href="#"><div class="addButtons">+</div></a></td>
 				  </tr>
 				  <tr>
-				    <td class="courseDescription small lightGray" colspan="3">{{data.description}}</td>
+				    <td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
 				  </tr>
 				    <tr>
-				    <td colspan="3"><a class="hyperlinks" target="_blank" href="{{data.url}}">visit exercise >></a></td>
+				    <td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}">preview</a></td>
 				  </tr>
 				</tbody>
 			</table>
@@ -73,6 +91,8 @@
 					KA PLAYLIST (beta) &copy; 2016
 			</footer>
 		</div><!-- .site-container -->
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/nav.js" charset="utf-8"></script>
+		<script src="js/main.js" charset="utf-8"></script>
 	</body>
 </html>
