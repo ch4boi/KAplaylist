@@ -1,14 +1,9 @@
 <html ng-app="myApp">
-	<head>
+<head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-	<script>
-	myApp=angular.module('myApp',[]);
-	myApp.controller('myController', function($scope,$http){
-		$http.get('json/data.json').success(function(response){
-			$scope.myData = response;
-		});
-	});
-	</script>
+
+	<!-- My files -->
+	<script src="js/main.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -17,145 +12,119 @@
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
-<!-- 	<link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
-	</head>
-	<body >
-		<div class="site-container">
-			
-			<div class="site-header">
-			    <div class="brand">
-			      <span class="logo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
-			    </div>
-			    <nav>
-			      <div class="nav-mobile">
-			        <a id="nav-toggle" href="#!"><span></span></a>
-			      </div>
-			      <ul class="nav-list">
-			        <li>
-			          <a href="#!">home</a>
-			        </li>
-			        <li>
-			          <a href="#!">about</a>
-			        </li>
-			        <li>
-			          <a href="#!">how to</a>
-			          <ul class="nav-dropdown">
-			            <li>
-			              <a href="#!">create</a>
-			            </li>
-			            <li>
-			              <a href="#!">share</a>
-			            </li>
-			            <li>
-			              <a href="#!">extras</a>
-			            </li>
-			          </ul>
-			        </li>
-			        <li>
-			          <a href="#!">contact</a>
-			        </li>
-			      </ul>
-			    </nav>
-			 </div>
+	<!-- 	<link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
+</head>
+<body >
+	<div class="site-container" ng-controller="myController">
 
-			<br>
-    			<input class="site-search" id="search" type="search" id="search" placeholder="Search &nbsp; &#128269; &nbsp; lessons..." />
+		<div class="site-header">
+			<div class="brand">
+				<span class="logo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
+			</div>
+			<nav>
+				<div class="nav-mobile">
+					<a id="nav-toggle" href="#!"><span></span></a>
+				</div>
+				<ul class="nav-list">
+					<li>
+						<a href="#!">home</a>
+					</li>
+					<li>
+						<a href="#!">about</a>
+					</li>
+					<li>
+						<a href="#!">how to</a>
+						<ul class="nav-dropdown">
+							<li>
+								<a href="#!">create</a>
+							</li>
+							<li>
+								<a href="#!">share</a>
+							</li>
+							<li>
+								<a href="#!">extras</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#!">contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 
-			<main class="site-content">
+		<br>
+		<input class="site-search" id="search" type="search" id="search" placeholder="Search &nbsp; &#128269; &nbsp; lessons..." />
+
+		<main class="site-content">
 
 
-			<table class="courses" ng-controller="myController">
+			<table class="courses">
 
 				<div class="pageCount">
 					<div class="count">7,654 </div>
 					<div class="ex1">exercises  &nbsp; &nbsp;-</div>
 					<a href="#!" class="filter"> filter</a>
 				</div>
-				
-				<tbody class="course" class="courseContainer">
-				  <tr>
-				    <td class="partNumber" rowspan="3"><div>1</div></td>
-				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
-				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
-				  </tr>
-				  <tr>
-				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
-				  </tr>
-				</tbody>
-
-				<tbody class="course" class="courseContainer">
-				  <tr>
-				    <td class="partNumber" rowspan="3"><div>1</div></td>
-				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
-				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
-				  </tr>
-				  <tr>
-				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
-				  </tr>
-				</tbody>
-
-				<tbody class="course" class="courseContainer">
-				  <tr>
-				    <td class="partNumber" rowspan="3"><div>1</div></td>
-				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
-				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
-				  </tr>
-				  <tr>
-				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
-				  </tr>
-				</tbody>
 
 				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
-				  <tr>
-				    <td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
-				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
-				    <td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">+</div></a></td>
-				  </tr>
-				  <tr>
-				    <td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
-				  </tr>
-<!-- 	<tr>
-		    <td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}"></a></td>
-		</tr> -->
+					<tr>
+						<td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
+
+						<td class="courseTitle medium" colspan="3">{{data.title}}</td>
+
+						<td class="addCourseButton" rowspan="3" ng-click="onOpenModalClicked($index)">
+							<a class="addCourseButtonLink" href="#">	<div class="addButtons">+</div>
+							</a>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
+
+<!-- 
+					    <td class="courseLinkData">
+					      url: {{data.url}}
+					  </td> -->
+					</tr>
+
 				</tbody>
 			</table>
 
 			<footer class="site-footer">
-					KA PLAYLIST (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>) 2016
+				KA PLAYLIST (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>) 2016
 			</footer>
-		</div><!-- .site-container -->
 
-<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
-<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
-<div id="openModal1" class="modalDialog">	
-		<div>
-		<tbody class="course" ng-repeat="data in myData" class="courseContainer">
-				  <tr>
-				    <td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
-				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
-				    <td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a></td>
-				  </tr>
-				  <tr>
-				    <td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
-				  </tr>
-<!-- 	<tr>
-		    <td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}"></a></td>
-		</tr> -->
-				</tbody>
-    			<a href="#close" title="Close" class="close">X</a>
-    		<div class="brand">
-			      <span class="logo modalLogo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
+			<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
+			<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
+			<div id="openModal1" class="modalDialog" ng-show="isModalActive">	
+				<div>
+					<tbody class="course" ng-repeat="data in myData" class="courseContainer">
+						<tr>
+							<td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
+							<td class="courseTitle medium" colspan="3">{{data.title}}</td>
+							<td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a></td>
+						</tr>
+						<tr>
+							<td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
+						</tr>
+					</tbody>
+					<a href="#" title="Close" class="close" ng-click="onCloseModalClicked()">X</a>
+					<div class="brand">
+						<span class="logo modalLogo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
+					</div>
+					<div class="modalCourseInfo">
+						Course url: {{selectedCourse.url}}
+					</div>
+				</div>
 			</div>
 
-			<td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}">visit course</a></td>
-	</div>
-</div>
+		</div><!-- .site-container -->
 
-<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
-<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
+		<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
+		<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/nav.js" charset="utf-8"></script>
-		<script src="js/main.js" charset="utf-8"></script>
 	</body>
-</html>
+	</html>  
