@@ -68,15 +68,48 @@
 
 				<div class="pageCount">
 					<div class="count">7,654 </div>
-					<div class="ex1">exercises - </div>
-					<a href="#!" class="filter">filter</a>
+					<div class="ex1">exercises  &nbsp; &nbsp;-</div>
+					<a href="#!" class="filter"> filter</a>
 				</div>
 				
+				<tbody class="course" class="courseContainer">
+				  <tr>
+				    <td class="partNumber" rowspan="3"><div>1</div></td>
+				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
+				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
+				  </tr>
+				  <tr>
+				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
+				  </tr>
+				</tbody>
+
+				<tbody class="course" class="courseContainer">
+				  <tr>
+				    <td class="partNumber" rowspan="3"><div>1</div></td>
+				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
+				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
+				  </tr>
+				  <tr>
+				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
+				  </tr>
+				</tbody>
+
+				<tbody class="course" class="courseContainer">
+				  <tr>
+				    <td class="partNumber" rowspan="3"><div>1</div></td>
+				    <td class="courseTitle medium" colspan="3">Rescuing cats from trees</td>
+				    <td class="addCourseButton" rowspan="3"><a href="#openModal1"><div class="addButtons">+</div></a></td>
+				  </tr>
+				  <tr>
+				    <td class="courseDescription lightGray" colspan="3">Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.</td>
+				  </tr>
+				</tbody>
+
 				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
 				  <tr>
 				    <td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
 				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
-				    <td class="addCourseButton" rowspan="3"><a href="#"><div class="addButtons">+</div></a></td>
+				    <td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">+</div></a></td>
 				  </tr>
 				  <tr>
 				    <td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
@@ -88,9 +121,22 @@
 			</table>
 
 			<footer class="site-footer">
-					KA PLAYLIST (beta) &copy; 2016
+					KA PLAYLIST (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>) 2016
 			</footer>
 		</div><!-- .site-container -->
+
+<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
+<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
+<div id="openModal1" class="modalDialog">	
+		<div>
+    			<a href="#close" title="Close" class="close">X</a>
+    		
+	</div>
+</div>
+
+<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
+<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/nav.js" charset="utf-8"></script>
 		<script src="js/main.js" charset="utf-8"></script>

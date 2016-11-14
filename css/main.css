@@ -223,12 +223,17 @@ Font-sizes:
 }}
 
 .site-content {
-	max-width: 960px;
-	margin: 0 auto;
 	padding-left: 5px;
 }
 
+@media (min-width: 800px){
+.site-content {
+	width: 70%;
+	margin-left: 15%;
+}}
+
 .site-footer {
+	margin-top: 40px;
 }
 
 /******************************************
@@ -288,6 +293,7 @@ Font-sizes:
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 5px;
+	padding-top: 2px;
 	padding-left: 10px;
 	padding-right: 11px;
 	display: inline-block;
@@ -304,20 +310,18 @@ Font-sizes:
 
 @media (min-width: 800px){
 	.filter {
-		margin-left: 30px;
+		margin-left: 15px;
 		}}
 
 .courseContainer {
 	width: 850px;
 	display: inline-block;
 	margin-top: 10px;
-	font-size: 
 }
 
 tbody {
-	margin-top: -15px;
+	padding-top: 15px;
 	padding-bottom:10px
-	border-bottom: 1px solid RGBA(210, 210, 210, 1.00);
 }
 
 td.partNumber{
@@ -327,6 +331,11 @@ td.partNumber{
 	font-size: 1.5rem;
 }
 
+@media (min-width: 800px){
+	td.partNumber{
+	padding-left: 10px;
+	}}
+
 td.courseTitle{
 	margin-left: 5px;
 	width: 750px;
@@ -334,14 +343,18 @@ td.courseTitle{
 }
 
 .courses{
-	max-width: 700px;
+
 }
 
 .course{
 	max-width: 800px;
 	display: inline-block;
-	margin-bottom: 30px;
 	width: 100%;
+	border-bottom: 1px solid RGBA(210, 210, 210, 1.00);
+}
+
+.course:hover{
+	background-color: #d6d6d6;
 }
 
 td.courseDescription{
@@ -365,16 +378,16 @@ td.courseDescription{
 }
 
 .addButtons {
-	padding: 0px 2px 0px 2px;
-	font-size: 1.75rem;
-	line-height: 20px;
-	margin-top: -25px;
-	margin-right: 10px;
-	color: RGBA(167, 218, 160, 1.00);
-	border: 2px solid RGBA(167, 218, 160, 1.00);
-	border-radius: 5px;
-	display: inline-block;
-	background-color: RGBA(255, 255, 255, 1.00);
+    padding: 4px 6px 0px 6px;
+    font-size: 1.75rem;
+    line-height: 18px;
+    margin-top: -25px;
+    margin-right: 10px;
+    color: RGBA(167, 218, 160, 1.00);
+    border: 2px solid RGBA(167, 218, 160, 1.00);
+    border-radius: 5px;
+    display: inline-block;
+    background-color: RGBA(255, 255, 255, 1.00);
 }
 
 .addButtons:hover {
@@ -588,5 +601,133 @@ nav ul li ul li a {
 	margin: 0 auto;
 }
 
+/* S T A R T   OF   M O D A L   P O P - U P    P A N E L S*/
+/* S T A R T   OF   M O D A L   P O P - U P    P A N E L S*/
+.panel1{
+	height: 400px;
+	margin-top: 28px;
+	float: left;
+}
 
+@media (max-width: 700px){
+.panel1{
+	margin-top: 0;
+}
+}
+
+.panel1 a img{
+		height: 350px;
+		margin-left: 50px;
+}
+
+@media (max-width: 700px){
+.panel1 a img{
+		margin-left: 20px;
+		margin-top: 20px;
+	}
+}
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 700px;
+    height: 540px;
+    position: relative;
+    margin: 30px auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #f1f1f1;
+    background: #fff;
+}
+
+.modalDialog h2 {
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 20px;
+}
+
+@media (max-width: 750px){
+.modalDialog h2 {
+	margin-top: 50px;
+}
+}
+
+@media (max-width: 700px){
+	.modalDialog > div {
+	   width: 85%;
+	   height: 480px;
+	   position: relative;
+	   margin: 10px auto;
+	   padding: 5px 20px 13px 20px;
+	   border-radius: 3px;
+	   background: #f1f1f1;
+	   background: #fff;
+	   overflow-y:auto;
+	}
+}
+
+.close {
+    background: white;
+    color: #CDCDCD;
+    line-height: 55px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 56px;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 300px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+    border: 3px solid #CDCDCD;
+}
+
+@media (max-width: 700px){
+	.close {
+	    color: #303030;
+	    position: fixed;
+	    right: 0;
+	    top: 0;
+      	    font-size: 2.5rem;
+	  	    }
+}
+
+
+.gone {
+}
+
+@media (max-width: 700px){
+
+.gone {
+       display:none;
+}
+}
+
+.close:hover { 
+	background: RGBA(232, 240, 252, 1); 
+	text-decoration: none
+		}
+/* E N D   OF   M O D A L   P O P - U P    P A N E L S*/
+/* E N D   OF   M O D A L   P O P - U P    P A N E L S*/
 
