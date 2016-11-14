@@ -129,12 +129,25 @@
 <!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
 <div id="openModal1" class="modalDialog">	
 		<div>
+		<tbody class="course" ng-repeat="data in myData" class="courseContainer">
+				  <tr>
+				    <td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
+				    <td class="courseTitle medium" colspan="3">{{data.title}}</td>
+				    <td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a></td>
+				  </tr>
+				  <tr>
+				    <td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
+				  </tr>
+<!-- 	<tr>
+		    <td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}"></a></td>
+		</tr> -->
+				</tbody>
     			<a href="#close" title="Close" class="close">X</a>
     		<div class="brand">
-			      <span class="logo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
+			      <span class="logo modalLogo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
 			</div>
 
-			<td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}">preview</a></td>
+			<td colspan="3"><a class="courseLink" target="_blank" href="{{data.url}}">visit course</a></td>
 	</div>
 </div>
 

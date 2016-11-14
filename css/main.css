@@ -195,13 +195,17 @@ Font-sizes:
 	font-size: 1.8rem;
 	letter-spacing: .05rem;
 	position: absolute;
-	padding-left: 30px;
+	padding-left: 10px;
 	float: left;
 	line-height: 45px;
 	text-transform: uppercase;
 	word-spacing: .3rem; 
 	color: #646464;
 	margin-right: 5px
+}
+
+.modalLogo{
+	font-size: 1.25rem;
 }
 
 @media (min-width: 800px){
@@ -333,7 +337,7 @@ tbody {
 td.partNumber{
 	padding-right: 10px;
 	vertical-align: top;
-	color: RGBA(0, 0, 0, 1.00);
+	color: RGBA(100, 100, 100, 1.00);
 	font-size: 1.5rem;
 }
 
@@ -360,7 +364,7 @@ td.courseTitle{
 }
 
 .course:hover{
-	background-color: #d6d6d6;
+	background-color: RGBA(240, 240, 240, .50);
 }
 
 td.courseDescription{
@@ -368,22 +372,27 @@ td.courseDescription{
 	font-size: .75rem;
 }
 
-/*
 .courseLink {
 	display: inline-block;
 	color: #7d9dfe;
-	font-size: .75rem;
-	float: right;
-    margin-top: -10px;
-    background-color: #f6f6f6;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 1px;
-    padding-bottom: 3px;
+	font-size: 2rem;
+	font-weight: 400px;
+    background-color: #fff;
+    padding-top: 1px, 8px, 3px, 8px;
     border-radius: 5px;
     margin-right: -24;
+    border: 2px solid #7d9dfe;
 }
-*/
+
+.courseLink:hover {
+	background-color: #7d9dfe;
+	color: #fff;
+}
+
+#modalDialog .addButtons {
+	font-size: 1.5rem;
+	padding-top: 1px, 8px, 3px, 8px;
+}
 
 .addButtons {
     padding: 4px 6px 0px 6px;
