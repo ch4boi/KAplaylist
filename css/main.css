@@ -362,6 +362,7 @@ td.courseDescription{
 	font-size: .75rem;
 }
 
+/*
 .courseLink {
 	display: inline-block;
 	color: #7d9dfe;
@@ -376,6 +377,7 @@ td.courseDescription{
     border-radius: 5px;
     margin-right: -24;
 }
+*/
 
 .addButtons {
     padding: 4px 6px 0px 6px;
