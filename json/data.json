@@ -2,37 +2,44 @@
 	"description": "#1 description - Introduction to electricity, circuits, current, and resistance",
 	"title": "Circuits and Ohm's law",
 	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "electrical engineering"
+	"subject": "electrical engineering",
+	"kind": "video"
 }, {
 	"description": "Is it possible that I've actually forgotten how to manually do long division? This is my chance to quickly quiz myself and find out",
 	"title": "Double Digit long division",
 	"url": "https://api.khanacademy.org/video/circuits-part-2",
-	"subject": "math"
+	"subject": "math",
+	"kind": "video"
 }, {
 	"description": "A challenging quiz with no wrong answers, intended to test your thinking and consideration on the subject of possibilities as a function of probabilities and statistics",
 	"title": "Get to know your science",
 	"url": "https://api.khanacademy.org/video/circuits-part-3",
-	"subject": "math"
+	"subject": "math",
+	"kind": "quiz"
 }, {
 	"description": "Sure we all love cats. Wait, that's not even remotely true, because they have mind power of us via interwebs. If you're reading this is too late.",
 	"title": "Rescuing cats from trees",
 	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "science"
+	"subject": "science",
+	"kind": "practice"
 }, {
 	"description": "A sports history in 5mins, from ancient Grece to modern Olympics",
 	"title": "Float & Sting",
 	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "history"
+	"subject": "history",
+	"kind": "video"
 }, {
 	"description": "You can't make this stuff up. Or can you? Find out in short open-ended quiz!",
 	"title": "Something else science-y",
 	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "random"
+	"subject": "random",
+	"kind": "video"
 }, {
 	"description": "How important is early education in a study about the whole of learning platforms?",
 	"title": "Early education 101",
 	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "education"
+	"subject": "education",
+	"kind": "video"
 }, {
 	"description": "This guy will be sorely missed. RIP to a great thinker and a truly forward-thinking thought leader of our time",
 	"title": "Seymour Papert - Life of a legend",

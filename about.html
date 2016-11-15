@@ -1,0 +1,116 @@
+<html ng-app="myApp">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+<!-- My files -->
+	<script src="js/main.js" charset="utf-8"></script>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="images/pencil.png">
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<!-- 	<link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
+</head>
+
+<body >
+	<div class="site-container" ng-controller="myController">
+
+<!-- N A V  -->
+<!-- N A V  -->
+		<div class="site-header">
+			<div class="brand">
+				<span class="logo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
+			</div>
+			<nav>
+				<div class="nav-mobile">
+					<a id="nav-toggle" href="#!"><span></span></a>
+				</div>
+				<ul class="nav-list">
+					<li>
+						<a href="/index.html">home</a>
+					</li>
+					<li>
+						<a href="#!">about</a>
+					</li>
+					<li>
+						<a href="#!">how to</a>
+						<ul class="nav-dropdown">
+							<li>
+								<a href="#!">create</a>
+							</li>
+							<li>
+								<a href="#!">share</a>
+							</li>
+							<li>
+								<a href="#!">extras</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#!">contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	<main class="site-content">
+		<div class="pageTitle">
+			About
+		</div>
+		<div class="description">
+KA-playlist is a free web-app meant to help educators to help their students prepare for class with Khan Academy. It is based on the <a class="extLink" href="https://api-explorer.khanacademy.org/">Khan Academy api</a>. 
+<br><br>
+The idea behind this tool is that you can create a custom curriculum of prerequisites that will ensure incoming students are prepared to take on your course material.
+<div class="pageTitle">Examples</div>
+Teaching astronomy? Maybe your students need to brush up on some rudimentary physics or chemistry concepts so that you can focus on actually teaching astronomy.
+<br><br>
+Teaching poly-sci? Maybe there's a good history lesson that your students can familiarize themselves with before you meet to discuss present times.
+<br><br>
+Your custom playlist can help students to prepare at home for more meaningful discussions during the more precious limited class time.
+<div class="pageTitle">Why</div>
+This concept was developed when a <a class="extLink" href="http://alexwyrick.com/about.html">design student</a> wanted to take the acclaimed <a class="extLink" href="https://www.coursera.org/learn/machine-learning">Stanford machine learning</a> course online. He needed to brush-up on math, but what parts of math? Khan academy offers thousands of videos organized on math but he didn’t know where to begin.
+<br><br>
+After crawling Khan Academy for some time, I found <a class="extLink" href="https://khanacademy.zendesk.com/hc/en-us/community/posts/201466174-Create-custom-missions">in the forums</a> that many educators were looking for this...
+<br>
+<div class="pageTitle">What educators are saying:</div>
+"I'd like to be able to hand-pick skills and create my own custom "mission" that would represent what I need my students to learn this year.”<br>
+- Charles Garand
+<br><br>
+"I'm sure this is a problem that is currently stopping many people in the UK from using KA in school…”<br>
+- Cornish Calculator
+<br><br>
+"Yes!  Totally agree.  This would make it my number one tool in the tutoring program I coordinate.”<br>
+- Erica Butler
+<br><br>
+"I don't quite understand why this is not an option, unless they plan on releasing it later as paid add on. I would pay for it by the way!”<br>
+- Jccook
+<br><br>
+"I would love to have the capabilities of pre-selecting skills to put within a mission. If I was able to do this, I could also use Khan more effectively with my students on an Individualized Education Plan.”<br>
+- Mr. Campbell
+<br><br>
+"Khan Academy has a lot of great pre-existing content and playlist.  It would be beneficial for some teachers/coaches however to be able to create custom playlist for students.  This would allow coaches to not have to recommend the same subset of skills/videos to students working on similar material but to just recommend the playlist.  It may even be nice to allow other members to vote on playlist that are useful.”<br>
+- Joe Neilson
+<div class="pageTitle">Next</div>
+Future versions of this app could plug into the <a class="extLink" href="https://api-explorer.khanacademy.org/">api oAuth tools</a> so that teachers could assign custom playlists, track student progress and create custom badges for completion. I think a rating system could also be interesting so better (user-approved) content can be made more visible.
+
+- Alex
+<br><br>
+		</div>
+
+	</div><!-- .site-container -->
+
+<!-- F O O T E R -->
+<!-- F O O T E R -->
+			<footer class="site-footer">
+				KA PLAYLIST<img class="KAlogoFoot" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"> 2016 (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>)
+			</footer>
+
+<!-- M O R E   S C R I P T -->
+<!-- M O R E   S C R I P T -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/nav.js" charset="utf-8"></script>
+	</body>
+	</html>  

@@ -1,22 +1,25 @@
 <html ng-app="myApp">
+
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-	<!-- My files -->
+<!-- My files -->
 	<script src="js/main.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="shortcut icon" href="images/pencil.png">
-	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 	<!-- 	<link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">  -->
 </head>
+
 <body >
 	<div class="site-container" ng-controller="myController">
 
+<!-- N A V  -->
+<!-- N A V  -->
 		<div class="site-header">
 			<div class="brand">
 				<span class="logo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
@@ -30,7 +33,7 @@
 						<a href="#!">home</a>
 					</li>
 					<li>
-						<a href="#!">about</a>
+						<a href="/about.html">about</a>
 					</li>
 					<li>
 						<a href="#!">how to</a>
@@ -53,76 +56,94 @@
 			</nav>
 		</div>
 
+<!-- S E A R C H   B A R  -->
+<!-- S E A R C H   B A R  -->
 		<br>
 		<input class="site-search" id="search" type="search" id="search" placeholder="Search &nbsp; &#128269; &nbsp; lessons..." />
 
 		<main class="site-content">
-
 
 			<table class="courses">
 
 				<div class="pageCount">
 					<div class="count">7,654 </div>
 					<div class="ex1">exercises  &nbsp; &nbsp;-</div>
-					<a href="#!" class="filter"> filter</a>
+					<a href="#!" class="filter">apply filter</a>
 				</div>
 
+<!-- S E A R C H   R E S U L T S  -->
+<!-- S E A R C H   R E S U L T S  -->
 				<tbody class="course" ng-repeat="data in myData" class="courseContainer">
 					<tr>
 						<td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
 
-						<td class="courseTitle medium" colspan="3">{{data.title}}</td>
+						<td class="courseTitle" colspan="3">{{data.title}}</td>
 
 						<td class="addCourseButton" rowspan="3" ng-click="onOpenModalClicked($index)">
-							<a class="addCourseButtonLink" href="#">	<div class="addButtons">+</div>
+							<a class="addCourseButtonLink" href="#">	<div class="plusButton">+</div>
 							</a>
 						</td>
 					</tr>
 
 					<tr>
 						<td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
-
-<!-- 
-					    <td class="courseLinkData">
-					      url: {{data.url}}
-					  </td> -->
 					</tr>
 
 				</tbody>
 			</table>
 
-			<footer class="site-footer">
-				KA PLAYLIST (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>) 2016
-			</footer>
+<!--- M O D A L   P O P - U P   -->
+<!--- M O D A L   P O P - U P   -->
 
-			<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
-			<!--- S T A R T   OF   M O D A L   P O P - U P    P A N E L S  -->
 			<div id="openModal1" class="modalDialog" ng-show="isModalActive">	
 				<div>
 					<tbody class="course" ng-repeat="data in myData" class="courseContainer">
-						<tr>
-							<td class="partNumber" rowspan="3"><div>{{$index+1}}</div></td>
-							<td class="courseTitle medium" colspan="3">{{data.title}}</td>
-							<td class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a></td>
-						</tr>
-						<tr>
-							<td class="courseDescription lightGray" colspan="3">{{data.description}}</td>
-						</tr>
 					</tbody>
+
 					<a href="#" title="Close" class="close" ng-click="onCloseModalClicked()">X</a>
+
 					<div class="brand">
 						<span class="logo modalLogo">KA PLAYLIST<img class="KAlogo" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"></span>
 					</div>
+
 					<div class="modalCourseInfo">
-						Course url: {{selectedCourse.url}}
+						<div class="modalCourseTitle">
+						{{selectedCourse.title}}:
+							<div class="modalCourseKind">
+							({{selectedCourse.kind}})
+							</div>
+						</div>
+						<div class="modalCourseDescription">
+						{{selectedCourse.description}}
+						</div>
+<!-- 					<div class="modalCourseLink">
+						 {{selectedCourse.url}}
+						</div> -->
+					</div>
+
+					<div class="modalButtons">
+						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a>
+						</div>
+
+						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="linkButtons">visit course</div></a>
+						</div>
+
+						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href=""><div class="linkButtons">copy url</div></a>
+						</div>
 					</div>
 				</div>
-			</div>
+			</div><!-- #openModal1 -->
 
-		</div><!-- .site-container -->
+	</div><!-- .site-container -->
 
-		<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
-		<!--- E N D   OF   M O D A L   P O P - U P    P A N E L S  -->
+<!-- F O O T E R -->
+<!-- F O O T E R -->
+			<footer class="site-footer">
+				KA PLAYLIST<img class="KAlogoFoot" src="https://cdn.kastatic.org/images/avatars/svg/leaf-green.svg"> 2016 (by <a href="http://alexwyrick.com/" target="_blank">Alex Wyrick</a>)
+			</footer>
+
+<!-- M O R E   S C R I P T -->
+<!-- M O R E   S C R I P T -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/nav.js" charset="utf-8"></script>

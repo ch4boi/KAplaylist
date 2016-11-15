@@ -40,7 +40,7 @@ Font-sizes:
 /*******************************************/
 
 /******************************************
-/* SEARCHBAR TEXT STYLING
+/* SEARCHBAR TEXT STYLING - START
 /*******************************************/
 ::-webkit-input-placeholder {
    text-align: center;
@@ -99,7 +99,7 @@ Font-sizes:
   background-position: center;
 }
 /******************************************
-/* SEARCH BAR STYLING
+/* SEARCH BAR STYLING - END
 - https://www.formget.com/css-search-box/ 
 /*******************************************/
 
@@ -150,15 +150,14 @@ Font-sizes:
 	height: 40px;
 }
 
-/*@media (min-width: 750px){
+@media (min-width: 750px){
 	.site-header {
-		height: 70px;
-	}
-}*/
+	height: 80px;
+}}
 
 .site-search{
 	background-color: #fff;
-	border-top: 15px;
+	margin-top: 15px;
 }
 
 @media (min-width: 750px){
@@ -167,10 +166,10 @@ Font-sizes:
 }}
 
 #search{
-	margin-top: -34px;
+	margin-top: -50px;
 	width: 80%;
 	margin-left: 9%;
-	border-radius: 1px;
+	border-radius: 3px;
 	border: 1px solid #E6E6E6;
 	height: 23px;
 }
@@ -201,7 +200,7 @@ Font-sizes:
 	text-transform: uppercase;
 	word-spacing: .3rem; 
 	color: #646464;
-	margin-right: 5px
+	margin-right: 5px;
 }
 
 .modalLogo{
@@ -226,6 +225,11 @@ Font-sizes:
 	width: 40px;
 }}
 
+.KAlogoFoot{
+	width: 15px;
+	margin-bottom: -1px;
+}
+
 .site-content {
 	padding-left: 5px;
 }
@@ -237,9 +241,19 @@ Font-sizes:
 }}
 
 .site-footer {
-	margin-top: 40px;
+	font-family: 'Gotham-Light', sans-serif;
+	font-size: .9rem;
+	margin-top: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 5%;
+	background-color: #FAFAFA;
 }
 
+@media (min-width: 800px){
+.site-footer {
+	padding-left: 10%;
+}}
 /******************************************
 /* HELPER CLASSES
 /*******************************************/
@@ -271,18 +285,27 @@ Font-sizes:
 	margin-left: -50px;
 	text-align: center;
 	display: inline-block;
-	width: 70%;
-	margin-left: 15%;
+	width: 80%;
+	margin-left: 10%;
 }
+
+@media (min-width: 800px){
+	.pageCount {
+	margin-bottom: 25px;
+	margin-left: -50px;
+	width: 80%;
+	margin-left: 10%;
+}}
 
 .count {
 	display: inline-block;
+	font-size: 1rem;
 }
 
-.ex1 {
-	font-size: .75rem;
-	display: inline-block;
-}
+@media (min-width: 800px){
+	.count {
+	font-size: 1.25rem;
+}}
 
 .nav-list{
 	font-style: none;
@@ -297,14 +320,16 @@ Font-sizes:
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 5px;
-	padding-top: 2px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	padding-left: 10px;
 	padding-right: 11px;
 	display: inline-block;
 	color: #036E9F;
 	border: 2px solid RGBA(200, 200, 200, 1.00);
-	border-radius: 3px;
+	border-radius: 50px;
 	display: inline-block;
+	font-size: .75rem;
 }
 
 .filter:hover {
@@ -314,8 +339,12 @@ Font-sizes:
 
 @media (min-width: 800px){
 	.filter {
+		padding-bottom: 4px;
+		padding-left: 10px;
+		padding-right: 11px;
+		font-size: 1rem;
 		margin-left: 15px;
-		}}
+}}
 
 .courseContainer {
 	width: 850px;
@@ -336,6 +365,7 @@ tbody {
 
 td.partNumber{
 	padding-right: 10px;
+	padding-left: 5px;
 	vertical-align: top;
 	color: RGBA(100, 100, 100, 1.00);
 	font-size: 1.5rem;
@@ -350,7 +380,16 @@ td.courseTitle{
 	margin-left: 5px;
 	width: 750px;
 	color: #036E9F;
+	font-size: 1.25rem;
 }
+
+@media (min-width: 800px){
+td.courseTitle{
+	margin-left: 5px;
+	width: 750px;
+	color: #036E9F;
+	font-size: 1.5rem;
+}}
 
 .courses{
 
@@ -358,7 +397,7 @@ td.courseTitle{
 
 .course{
 	max-width: 800px;
-	display: inline-block;
+	display: inline-block;isModalActive
 	width: 100%;
 	border-bottom: 1px solid RGBA(210, 210, 210, 1.00);
 }
@@ -371,6 +410,12 @@ td.courseDescription{
 	display: inline-block;
 	font-size: .75rem;
 }
+
+@media (min-width: 800px){
+td.courseDescription{
+	display: inline-block;
+	font-size: 1rem;
+}}
 
 .courseLink {
 	display: inline-block;
@@ -389,29 +434,81 @@ td.courseDescription{
 	color: #fff;
 }
 
-#modalDialog .addButtons {
-	font-size: 1.5rem;
-	padding-top: 1px, 8px, 3px, 8px;
-}
-
-.addButtons {
-    padding: 4px 6px 0px 6px;
-    font-size: 1.75rem;
+.plusButton {
+	text-align: center;
+    padding: 4px 8px 0px 8px;
+    font-size: 1.5rem;
     line-height: 18px;
     margin-top: -25px;
     margin-right: 10px;
     color: RGBA(167, 218, 160, 1.00);
     border: 2px solid RGBA(167, 218, 160, 1.00);
-    border-radius: 5px;
+    border-radius: 50px;
     display: inline-block;
     background-color: RGBA(255, 255, 255, 1.00);
 }
+
+.plusButton:hover {
+	color: RGBA(255, 255, 255, 1.00);
+	background-color: RGBA(167, 218, 160, 1.00);
+}
+
+.addButtons {
+	width: 70%;
+	margin-top: 20px;
+    margin-right: 10px;
+	margin-left: 15%;
+	text-align: center;
+    padding: 4px 8px;
+    font-size: 1.25rem;
+    line-height: 18px;
+    border-radius: 50px;
+    display: inline-block;
+    color: RGBA(167, 218, 160, 1.00);
+    border: 2px solid RGBA(167, 218, 160, 1.00);
+    background-color: RGBA(255, 255, 255, 1.00);
+}
+
+@media (min-width: 800px){
+	.addButtons {
+		width: 30%;
+		margin-left: 25%;
+		margin-right: 10px;
+}}
+
 
 .addButtons:hover {
 	color: RGBA(255, 255, 255, 1.00);
 	background-color: RGBA(167, 218, 160, 1.00);
 }
 
+.linkButtons{
+	width: 70%;
+	margin-top: 20px;
+    margin-right: 10px;
+	margin-left: 15%;
+	text-align: center;
+    padding: 4px 8px;
+    font-size: 1.25rem;
+    line-height: 18px;
+    border-radius: 50px;
+    display: inline-block;
+    color: RGBA(129, 183, 207, 1.00);
+    border: 2px solid RGBA(129, 183, 207, 1.00);
+    background-color: RGBA(255, 255, 255, 1.00);
+}
+
+@media (min-width: 800px){
+	.linkButtons {
+		width: 30%;
+		margin-left: 25%;
+		margin-right: 10px;
+}}
+
+.linkButtons:hover {
+	color: RGBA(255, 255, 255, 1.00);
+	background-color: RGBA(129, 183, 207, 1.00);
+}
 
 .addCourse {
 	display: inline-block;
@@ -419,17 +516,6 @@ td.courseDescription{
 	margin-right: 10px;
 	float: left;
 	margin-top: 10px;
-}
-
-.plusButton {
-	font-size: 2.75rem;
-	font-weight: 600;
-	margin-top: -4px;
-	display: inline-block;
-}
-
-.plusButton:hover {
-	color: white;
 }
 
 .activeLink {
@@ -577,7 +663,7 @@ nav ul li ul li a {
 
 	nav {
 		width: 100%;
-		padding: 70px 0 15px;
+		padding: 80px 0 15px 0;
 	}
 
 	nav ul {
@@ -620,28 +706,11 @@ nav ul li ul li a {
 
 /* S T A R T   OF   M O D A L   P O P - U P    P A N E L S*/
 /* S T A R T   OF   M O D A L   P O P - U P    P A N E L S*/
-.panel1{
-	height: 400px;
-	margin-top: 28px;
-	float: left;
-}
 
 @media (max-width: 700px){
 .panel1{
 	margin-top: 0;
 }
-}
-
-.panel1 a img{
-		height: 350px;
-		margin-left: 50px;
-}
-
-@media (max-width: 700px){
-.panel1 a img{
-		margin-left: 20px;
-		margin-top: 20px;
-	}
 }
 
 .modalDialog {
@@ -651,7 +720,7 @@ nav ul li ul li a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(180,180,180,.8);
     z-index: 99999;
     opacity:1;
     -webkit-transition: opacity 400ms ease-in;
@@ -659,32 +728,15 @@ nav ul li ul li a {
     transition: opacity 400ms ease-in;
 }
 
-/*.modalDialog:target {
-    opacity:1;
-    pointer-events: auto;
-}*/
-
 .modalDialog > div {
     width: 700px;
     height: 540px;
     position: relative;
     margin: 30px auto;
     padding: 5px 20px 13px 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     background: #f1f1f1;
     background: #fff;
-}
-
-.modalDialog h2 {
-	font-size: 2rem;
-	text-align: center;
-	margin-top: 20px;
-}
-
-@media (max-width: 750px){
-.modalDialog h2 {
-	margin-top: 50px;
-}
 }
 
 @media (max-width: 700px){
@@ -701,9 +753,69 @@ nav ul li ul li a {
 	}
 }
 
+.modalCourseInfo{
+	display: inline-block;
+}
+
+.modalCourseTitle {
+	font-size: 2rem;
+	margin-top: 90px;
+	margin-left: 25px;
+	color: #036E9F;
+	display: inline-block;
+}
+
+@media (max-width: 700px){
+	.modalCourseTitle {
+	font-size: 1.75rem;
+	margin-top: 50px;
+	margin-left: 10px;
+}}
+
+.modalCourseKind{
+	font-size: 2rem;
+	font-weight: 600px;
+	display: inline-block;
+	color: RGBA(142, 142, 142, 1.00);
+}
+
+@media (max-width: 700px){
+	.modalCourseKind {
+	font-size: 1.75rem;
+}}
+
+.modalCourseDescription {
+	margin-top: 20px;
+	margin-left: 25px;
+	margin-right: 40px;
+	color: #000;
+}
+
+@media (max-width: 700px){
+	.modalCourseDescription {
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #000;
+}}
+
+.modalCourseLink {
+	margin-top: 20px;
+	margin-left: 25px;
+	margin-right: 10px;
+	color: #000;
+}
+
+@media (max-width: 700px){
+	.modalCourseLink {
+	margin-top: 20px;
+	margin-left: 25px;
+	color: #000;
+}}
+
 .close {
     background: white;
-    color: #CDCDCD;
+    color: RGBA(3, 110, 159, 1.00);
     line-height: 55px;
     position: absolute;
     right: -12px;
@@ -711,21 +823,18 @@ nav ul li ul li a {
     top: -10px;
     width: 56px;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300px;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
     border-radius: 80px;
-    border: 3px solid #CDCDCD;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 700px){
 	.close {
-	    color: #303030;
 	    position: fixed;
-	    right: 0;
+	    right: 20;
 	    top: 0;
-      	    font-size: 2.5rem;
+      	font-size: 2.5rem;
 	  	    }
 }
 
@@ -734,16 +843,55 @@ nav ul li ul li a {
 }
 
 @media (max-width: 700px){
-
 .gone {
        display:none;
-}
-}
+}}
 
 .close:hover { 
 	background: RGBA(232, 240, 252, 1); 
 	text-decoration: none
-		}
-/* E N D   OF   M O D A L   P O P - U P    P A N E L S*/
-/* E N D   OF   M O D A L   P O P - U P    P A N E L S*/
+}
+
+/*  A B O U T   P A G E  */
+/*  A B O U T   P A G E  */
+
+.pageTitle{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	color: RGBA(100, 100, 100, 1.00);
+	font-size: 2rem;
+}
+
+@media (max-width: 700px){
+	.pageTitle{
+		margin-top: 10px;
+}}
+
+.ex1{
+	display: inline-block;
+}
+
+@media (max-width: 750px){
+.ex1{
+	font-size: .75rem;
+	display: inline-block;
+}}
+
+.description{
+	display: inline-block;
+	font-size: 1rem;
+}
+
+@media (max-width: 700px){
+.description{
+	width: 80%;
+	margin-left: 10%;
+}}
+
+.extLink{
+	text-decoration: underline;
+}
+
+
 
