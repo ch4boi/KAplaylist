@@ -889,6 +889,10 @@ nav ul li ul li a {
 	margin-left: 10%;
 }}
 
+.quotes{
+	font-size: .5;
+}
+
 .extLink{
 	text-decoration: underline;
 }

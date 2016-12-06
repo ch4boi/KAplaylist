@@ -1,16 +1,21 @@
 myApp=angular.module('myApp',[]);
-myApp.controller('myController', function($scope,$http){
+myApp.controller('myController', function($scope, $http){ // Every $* variables are angular's modules
 
+	// Everything assigned in $scope is accessible in the DOM (HTML)
 	$scope.isModalActive = false;
-	$scope.selectedCourse = {};
 
+	$scope.selectedCourse;
+
+
+	// opens modal by setting as active and keep track of the index of the entry
 	$scope.onOpenModalClicked = function(index) {
 		$scope.isModalActive = true;
 
 		console.log("index: " + index);
 
+		// Get the entry corresponding to the index clicked
+		// Defining what is "selectedCourse" as being within a specific index
 		$scope.selectedCourse = $scope.myData[index];
-		 
 	}
 
 	$scope.onCloseModalClicked = function() {
@@ -24,5 +29,8 @@ myApp.controller('myController', function($scope,$http){
 
 		console.log(response);
 	});
+
+// new stuff
+
 
 });

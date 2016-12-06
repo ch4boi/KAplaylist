@@ -95,7 +95,7 @@
 <!--- M O D A L   P O P - U P   -->
 <!--- M O D A L   P O P - U P   -->
 
-			<div id="openModal1" class="modalDialog" ng-show="isModalActive">	
+			<div id="openModal1" class="modalDialog" ng-show="isModalActive" class="courseContainer">	
 				<div>
 					<tbody class="course" ng-repeat="data in myData" class="courseContainer">
 					</tbody>
@@ -108,6 +108,8 @@
 
 					<div class="modalCourseInfo">
 						<div class="modalCourseTitle">
+						<!-- selectedCourse is contained in $scope. It is like we are doing $scope.selectedCourse, 
+							 but angular omits "$scope" -->
 						{{selectedCourse.title}}:
 							<div class="modalCourseKind">
 							({{selectedCourse.kind}})
@@ -116,19 +118,21 @@
 						<div class="modalCourseDescription">
 						{{selectedCourse.description}}
 						</div>
-<!-- 					<div class="modalCourseLink">
-						 {{selectedCourse.url}}
-						</div> -->
+
+						<div class="modalCourseDescription">
+							<a ng-href="{{selectedCourse.url}}">. . .
+							</a>
+						</div>
 					</div>
 
 					<div class="modalButtons">
 						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="addButtons">add to list +</div></a>
 						</div>
 
-						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href="#"><div class="linkButtons">visit course</div></a>
+						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href=""><div class="linkButtons">visit course</div></a>
 						</div>
 
-						<div class="addCourseButton" href="#openModal1"rowspan="3"><a href=""><div class="linkButtons">copy url</div></a>
+						<div class="addCourseButton" href="#openModal1"rowspan="3"><a class="modalCourseLink" href=""><div class="linkButtons">copy url</div></a>
 						</div>
 					</div>
 				</div>
