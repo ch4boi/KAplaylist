@@ -1,5 +1,7 @@
-myApp=angular.module('myApp',[]);
-myApp.controller('myController', function($scope, $http){ // Every $* variables are angular's modules
+myApp=angular.module('myApp',["ngclipboard"]);
+// ngClipBoard instruction here - https://sachinchoolur.github.io/ngclipboard/
+
+myApp.controller('myController', function($scope, $http){ // All $* variables are angular's modules
 
 	// Everything assigned in $scope is accessible in the DOM (HTML)
 	$scope.isModalActive = false;

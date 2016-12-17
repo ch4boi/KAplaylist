@@ -3,7 +3,11 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
-<!-- My files -->
+	<!-- ngClipBoard requires 2 things-->
+	<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+	<script src="js/ngclipboard/dist/ngclipboard.min.js"></script>
+
+
 	<script src="js/main.js" charset="utf-8"></script>
 
 	<link rel="stylesheet" href="css/normalize.css">
@@ -120,7 +124,10 @@
 						</div>
 
 						<div class="modalCourseDescription">
-							<a ng-href="{{selectedCourse.url}}">. . .
+<!-- 							<a ng-href="{{selectedCourse.url}}">. . .
+							</a> -->
+							<a href="#" class="btn" ngclipboard data-clipboard-text="{{selectedCourse.url}}">
+    							Copy Link
 							</a>
 						</div>
 					</div>
