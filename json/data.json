@@ -1,10 +1,4 @@
 [{
-	"description": "#1 description - Introduction to electricity, circuits, current, and resistance",
-	"title": "Circuits and Ohm's law",
-	"url": "https://api.khanacademy.org/video/circuits-part-1",
-	"subject": "electrical engineering",
-	"kind": "video"
-}, {
 	"description": "Is it possible that I've actually forgotten how to manually do long division? This is my chance to quickly quiz myself and find out",
 	"title": "Double Digit long division",
 	"url": "https://api.khanacademy.org/video/circuits-part-2",
