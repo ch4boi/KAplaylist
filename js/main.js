@@ -26,10 +26,8 @@ myApp.controller('myController', function($scope, $http){ // All $* variables ar
 		console.log("onCloseModalClicked");
 	}
 
-// 	$http.get('json/data.json').success(function(response){
-	$http.get('https://jochi.herokuapp.com/api/nodes?search=js').success(function(response){
+	$http.get('https://jochi.herokuapp.com/api/nodes.json?search=js').success(function(response){
 		$scope.myData = response;
-
 		console.log(response);
 	});
 
